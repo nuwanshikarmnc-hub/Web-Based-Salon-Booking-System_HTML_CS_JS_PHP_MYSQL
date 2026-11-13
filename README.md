@@ -1,2 +1,2 @@
 # Web-Based-Salon-Booking-System
-An interactive salon booking platform designed to streamline client reservations. Built with HTML, CSS, JavaScript, and PHP for a responsive frontend and robust server-side routing, backed by a relational database to securely manage customer records, services, and appointment schedules.
+An interactive web-based booking system designed for a ladies' salon to streamline appointment scheduling. Built with HTML, CSS, JavaScript, and PHP for a responsive frontend and server-side routing, supported by a relational database to manage customer records and service portfolios.
