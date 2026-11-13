@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>GlowUp Ladies - Contact Us | Beauty Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/contact-style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-flex">
+        <div class="logo">
+            <h1>GlowUp Ladies</h1>
+            <span class="tagline">beauty studio</span>
+        </div>
+        <nav class="main-nav">
+            <ul id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="staff.html">Staff</a></li>
+                <li><a href="appointments.html">Appointments</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-icon" id="menuIcon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<section class="contact-hero">
+    <div class="hero-background"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+        <h2>Get in Touch</h2>
+        <p>We'd love to hear from you — reach out for bookings, questions, or just to say hello.</p>
+    </div>
+</section>
+
+<section class="main-section">
+    <div class="container">
+        <div class="section-title">
+            <span class="subtitle">we're here for you</span>
+            <h3>Contact Us</h3>
+            <div class="divider"></div>
+        </div>
+        <div class="content-grid">
+            <div class="contact-form-wrapper">
+                <h3 class="form-title">Send Us a Message</h3>
+                <p class="form-subtitle">Fill out the form below and we'll get back to you within 24 hours.</p>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" placeholder="Your first name">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" placeholder="Your last name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="your@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="+94 77 xxx xxxx">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject">
+                        <option value="" disabled selected>Select a topic</option>
+                        <option value="booking">Appointment Booking</option>
+                        <option value="services">Services Inquiry</option>
+                        <option value="pricing">Pricing &amp; Packages</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" placeholder="Tell us how we can help you..."></textarea>
+                </div>
+                <button class="submit-btn" onclick="handleSubmit()">
+                    <i class="fas fa-paper-plane" style="margin-right:9px;"></i>Send Message
+                </button>
+                <div class="success-message" id="successMsg">
+                    <i class="fas fa-check-circle"></i>
+                    Thank you! Your message has been sent. We'll be in touch soon. ✨
+                </div>
+            </div>
+            <div class="sidebar-wrapper">
+                <div class="social-section">
+                    <div class="social-top">
+                        <h4>Follow &amp; Message Us</h4>
+                        <p class="sub">Connect with us on social media for beauty tips, updates, and exclusive offers.</p>
+                        <div class="social-buttons">
+                            <a href="#" class="social-btn instagram">
+                                <i class="fab fa-instagram"></i>
+                                <span>@glowupladies.studio</span>
+                                <i class="fas fa-arrow-right arrow"></i>
+                            </a>
+                            <a href="#" class="social-btn facebook">
+                                <i class="fab fa-facebook-f"></i>
+                                <span>GlowUp Ladies Beauty Studio</span>
+                                <i class="fas fa-arrow-right arrow"></i>
+                            </a>
+                            <a href="https://wa.me/94771234567" class="social-btn whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>Chat on WhatsApp</span>
+                                <i class="fas fa-arrow-right arrow"></i>
+                            </a>
+                            <a href="#" class="social-btn tiktok">
+                                <i class="fab fa-tiktok"></i>
+                                <span>@glowupladies</span>
+                                <i class="fas fa-arrow-right arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sidebar-divider"></div>
+                    <div class="quick-contact">
+                        <p class="quick-label">Prefer to reach us directly?</p>
+                        <a href="tel:+94228333503" class="quick-link">
+                            <span class="quick-icon"><i class="fas fa-phone-alt"></i></span>
+                            <span>+94 228 333 503</span>
+                        </a>
+                        <a href="tel:+94771234567" class="quick-link">
+                            <span class="quick-icon"><i class="fas fa-phone-alt"></i></span>
+                            <span>+94 77 123 4567</span>
+                        </a>
+                        <a href="mailto:hello@glowupladies.lk" class="quick-link">
+                            <span class="quick-icon"><i class="far fa-envelope"></i></span>
+                            <span>hello@glowupladies.lk</span>
+                        </a>
+                        <a href="https://maps.google.com" target="_blank" class="quick-link">
+                            <span class="quick-icon"><i class="fas fa-map-marker-alt"></i></span>
+                            <span>14/8 Asiri Road, Colombo 05</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="reviews-section">
+    <div class="container">
+        <div class="section-title">
+            <span class="subtitle">what our clients say</span>
+            <h3>Customer Reviews</h3>
+            <div class="divider"></div>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p class="review-text">Absolutely loved my experience at GlowUp Ladies! The staff are so professional and welcoming.</p>
+                <div class="review-author">
+                    <div class="author-avatar">SP</div>
+                    <div class="author-info"><div class="name">Sandali Perera</div><div class="date">April 2026</div></div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p class="review-text">The online booking system made everything so easy. My hair colour result was stunning!</p>
+                <div class="review-author">
+                    <div class="author-avatar">NK</div>
+                    <div class="author-info"><div class="name">Nethmi Kumari</div><div class="date">March 2026</div></div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                <p class="review-text">Visited for a facial and manicure — both were exceptional. The salon is so clean and beautiful.</p>
+                <div class="review-author">
+                    <div class="author-avatar">AM</div>
+                    <div class="author-info"><div class="name">Amali Mendis</div><div class="date">March 2026</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <div class="footer-brand">
+            <h3>GlowUp Ladies</h3>
+            <p>Where elegance meets expertise.<br>Only by appointment — personalized service.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="footer-contact">
+            <h4>Contact</h4>
+            <p><i class="fas fa-map-marker-alt"></i> 14/8, Asiri Road, Colombo 05</p>
+            <p><i class="fas fa-phone-alt"></i> +94 228 333 503</p>
+            <p><i class="far fa-envelope"></i> hello@glowupladies.lk</p>
+        </div>
+        <div class="footer-hours">
+            <h4>Opening Hours</h4>
+            <p>Mon – Fri: 10:00 – 20:00</p>
+            <p>Saturday: 10:00 – 18:00</p>
+            <p>Sunday: Closed</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 GlowUp Ladies Beauty Studio — crafted with elegance.</p>
+    </div>
+</footer>
+
+<script src="js/contact-script.js"></script>
+</body>
+</html>

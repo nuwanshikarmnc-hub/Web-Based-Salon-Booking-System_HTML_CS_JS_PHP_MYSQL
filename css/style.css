@@ -1,0 +1,393 @@
+/* ============================================
+   GLOWUP LADIES - SERVICES PAGE STYLES
+   ============================================ */
+
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fefaf5;
+    color: #6b3e26;
+    line-height: 1.6;
+}
+
+/* ===== HEADINGS ===== */
+h1,
+h2,
+h3,
+h4,
+.logo,
+.section-title h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: #6b3e26;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+
+.site-header {
+    background: #fff8f2;
+    border-bottom: 1px solid #ead8c7;
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    color: #8b5a2b;
+    margin-bottom: 4px;
+}
+
+.tagline {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #b07b4f;
+    font-weight: 600;
+}
+
+/* ===== NAVIGATION ===== */
+
+.main-nav ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #6b3e26;
+    font-weight: 500;
+    transition: 0.3s ease;
+    padding-bottom: 4px;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: #8b5a2b;
+    border-bottom: 2px solid #c8a27c;
+}
+
+.mobile-menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    color: #8b5a2b;
+    cursor: pointer;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero-section {
+    background-image:
+        linear-gradient(
+        rgba(255,248,242,0.8),
+        rgba(222,184,135,0.5)
+    ),
+        url("C:/Users/User/Desktop/servicepage/imana/bg.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 110px 20px;
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: auto;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 12px;
+    color: #6b3e26;
+}
+
+.hero-content .highlight {
+    color: #8b5a2b;
+}
+
+.hero-content .divider {
+    font-size: 1.2rem;
+    color: #a56c43;
+    margin-bottom: 18px;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    color: #7a5238;
+}
+
+/* ============================================
+   SERVICES GRID
+   ============================================ */
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
+    padding: 60px 8%;
+    max-width: 1350px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   SERVICE CARD
+   ============================================ */
+
+.service-card {
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 0 5px 18px rgba(107, 62, 38, 0.08);
+    transition: 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(107, 62, 38, 0.15);
+}
+
+/* ===== CARD IMAGE ===== */
+
+.service-card img,
+.card-image {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ===== CARD CONTENT ===== */
+
+.card-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #6b3e26;
+}
+
+.card-content p {
+    color: #7a5238;
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+    flex-grow: 1;
+}
+
+/* ===== CARD FOOTER ===== */
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px dashed #d8c0ac;
+    padding-top: 14px;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+.card-footer .time {
+    color: #7a5238;
+}
+
+.card-footer .price {
+    color: #8b5a2b;
+    font-weight: 700;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.site-footer {
+    background: #3a271c;
+    color: #f4e6d7;
+    margin-top: 50px;
+    padding-top: 50px;
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-brand h3 {
+    font-size: 2rem;
+    color: #f3d8b8;
+    margin-bottom: 12px;
+}
+
+.footer-brand p {
+    color: #e4d0be;
+    line-height: 1.6;
+}
+
+.social-links {
+    margin-top: 18px;
+    display: flex;
+    gap: 18px;
+}
+
+.social-links a {
+    color: #f3d8b8;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #c89a6c;
+}
+
+.footer-contact h4,
+.footer-hours h4 {
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+    color: #f3d8b8;
+}
+
+.footer-contact p,
+.footer-hours p {
+    color: #e4d0be;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #5b4333;
+    text-align: center;
+    padding: 18px;
+    color: #ceb8a4;
+    font-size: 0.85rem;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 900px) {
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .main-nav ul {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .main-nav ul {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 75%;
+        height: 100vh;
+        background: #fffaf5;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        transition: 0.3s ease;
+        z-index: 999;
+        box-shadow: 4px 0 15px rgba(0,0,0,0.1);
+    }
+
+    .main-nav ul.show-menu {
+        left: 0;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-contact p,
+    .footer-hours p {
+        justify-content: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .hero-section {
+        padding: 80px 16px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.9rem;
+    }
+
+    .card-content {
+        padding: 20px;
+    }
+
+    .card-content h3 {
+        font-size: 1.4rem;
+    }
+}

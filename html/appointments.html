@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>GlowUp Ladies - Book an Appointment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/appointments.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-flex">
+        <div class="logo">
+            <h1>GlowUp Ladies</h1>
+            <span class="tagline">beauty studio</span>
+        </div>
+        <nav class="main-nav">
+            <ul id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="staff.html">Staff</a></li>
+                <li><a href="appointments.html" class="active">Appointments</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-icon" id="menuIcon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<section class="appt-hero">
+    <div class="hero-content">
+        <span class="hero-tag">✨ Book Your Moment ✨</span>
+        <h2>Reserve Your Beauty Experience</h2>
+        <p>Choose your service, select your favorite specialist, and pick the perfect time.</p>
+    </div>
+</section>
+
+<div class="steps-bar">
+    <div class="container steps-track">
+        <div class="step active" data-step="1">
+            <div class="step-num">1</div>
+            <span>Services</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step" data-step="2">
+            <div class="step-num">2</div>
+            <span>Specialist</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step" data-step="3">
+            <div class="step-num">3</div>
+            <span>DateTime</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step" data-step="4">
+            <div class="step-num">4</div>
+            <span>Your Info</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step" data-step="5">
+            <div class="step-num">5</div>
+            <span>Confirm</span>
+        </div>
+    </div>
+</div>
+
+<section class="booking-section">
+    <div class="container">
+        <form id="bookingForm">
+            <!-- STEP 1: SERVICES -->
+            <div class="form-step active" id="step1">
+                <div class="step-header">
+                    <h3>Choose Your Services</h3>
+                    <p>Select one or more services you'd like to book</p>
+                </div>
+                <div class="services-grid" id="servicesGrid">
+                    <div class="loading-spinner">Loading services...</div>
+                </div>
+                <div class="field-error hidden" id="err-services"></div>
+                <div class="step-nav">
+                    <button type="button" class="btn-next" onclick="goStep(1,2)">Next <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- STEP 2: STAFF -->
+            <div class="form-step" id="step2">
+                <div class="step-header">
+                    <h3>Select Your Specialist</h3>
+                    <p>Choose the expert you'd like to work with</p>
+                </div>
+                <div class="staff-grid" id="staffGrid">
+                    <div class="loading-spinner">Loading specialists...</div>
+                </div>
+                <div class="step-nav">
+                    <button type="button" class="btn-back" onclick="goStep(2,1)"><i class="fas fa-arrow-left"></i> Back</button>
+                    <button type="button" class="btn-next" onclick="goStep(2,3)">Next <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- STEP 3: DATE & TIME -->
+            <div class="form-step" id="step3">
+                <div class="step-header">
+                    <h3>Pick a Date & Time</h3>
+                    <p>Choose when you'd like to visit us</p>
+                </div>
+                <div class="datetime-grid">
+                    <div class="field-group">
+                        <label>Date <span class="req">*</span></label>
+                        <input type="date" id="appt_date" name="appt_date">
+                    </div>
+                    <div class="field-group">
+                        <label>Time <span class="req">*</span></label>
+                        <select id="appt_time" name="appt_time">
+                            <option value="">Select time</option>
+                            <option value="09:00">9:00 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="12:00">12:00 PM</option>
+                            <option value="13:00">1:00 PM</option>
+                            <option value="14:00">2:00 PM</option>
+                            <option value="15:00">3:00 PM</option>
+                            <option value="16:00">4:00 PM</option>
+                            <option value="17:00">5:00 PM</option>
+                            <option value="18:00">6:00 PM</option>
+                            <option value="19:00">7:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+                <p style="text-align:center;font-size:0.85rem;color:#b07b4f;margin-top:8px;">
+                    ⏳ We will check availability when you confirm your booking.
+                </p>
+                <div class="field-error hidden" id="err-date"></div>
+                <div class="field-error hidden" id="err-time"></div>
+                <div class="step-nav">
+                    <button type="button" class="btn-back" onclick="goStep(3,2)"><i class="fas fa-arrow-left"></i> Back</button>
+                    <button type="button" class="btn-next" onclick="goStep(3,4)">Next <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- STEP 4: CUSTOMER INFO -->
+            <div class="form-step" id="step4">
+                <div class="step-header">
+                    <h3>Your Details</h3>
+                    <p>Please provide your contact information</p>
+                </div>
+                <div class="details-grid">
+                    <div class="field-group full-width">
+                        <label>Full Name <span class="req">*</span></label>
+                        <input type="text" id="cust_name" name="cust_name" placeholder="Your full name">
+                    </div>
+                    <div class="field-group">
+                        <label>Phone <span class="req">*</span></label>
+                        <input type="tel" id="cust_phone" name="cust_phone" placeholder="+94 XX XXX XXXX">
+                    </div>
+                    <div class="field-group">
+                        <label>Email <span class="optional">(optional)</span></label>
+                        <input type="email" id="cust_email" name="cust_email" placeholder="your@email.com">
+                    </div>
+                    <div class="field-group full-width">
+                        <label>Special Requests / Notes</label>
+                        <textarea id="cust_notes" name="cust_notes" placeholder="Any allergies, preferences, or special requests..."></textarea>
+                    </div>
+                </div>
+                <div class="field-error hidden" id="err-name"></div>
+                <div class="field-error hidden" id="err-phone"></div>
+                <div class="field-error hidden" id="err-email"></div>
+                <div class="step-nav">
+                    <button type="button" class="btn-back" onclick="goStep(4,3)"><i class="fas fa-arrow-left"></i> Back</button>
+                    <button type="button" class="btn-next" onclick="goStep(4,5)">Review Booking <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- STEP 5: SUMMARY & CONFIRM -->
+            <div class="form-step" id="step5">
+                <div class="step-header">
+                    <h3>Confirm Your Booking</h3>
+                    <p>Please review your appointment details</p>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-row">
+                        <div class="summary-label"><i class="fas fa-cut"></i> Services</div>
+                        <div class="summary-val" id="sum-services">—</div>
+                    </div>
+                    <div class="summary-row">
+                        <div class="summary-label"><i class="fas fa-user"></i> Specialist</div>
+                        <div class="summary-val" id="sum-beautician">—</div>
+                    </div>
+                    <div class="summary-row">
+                        <div class="summary-label"><i class="fas fa-calendar"></i> Date</div>
+                        <div class="summary-val" id="sum-date">—</div>
+                    </div>
+                    <div class="summary-row">
+                        <div class="summary-label"><i class="fas fa-clock"></i> Time</div>
+                        <div class="summary-val" id="sum-time">—</div>
+                    </div>
+                    <div class="summary-row">
+                        <div class="summary-label"><i class="fas fa-user-circle"></i> Name</div>
+                        <div class="summary-val" id="sum-name">—</div>
+                    </div>
+                    <div class="summary-row">
+                        <div class="summary-label"><i class="fas fa-phone"></i> Phone</div>
+                        <div class="summary-val" id="sum-phone">—</div>
+                    </div>
+                    <div class="summary-row">
+                        <div class="summary-label"><i class="fas fa-envelope"></i> Email</div>
+                        <div class="summary-val" id="sum-email">—</div>
+                    </div>
+                    <div class="summary-row">
+                        <div class="summary-label"><i class="fas fa-pencil-alt"></i> Notes</div>
+                        <div class="summary-val" id="sum-notes">—</div>
+                    </div>
+                </div>
+                <div class="step-nav">
+                    <button type="button" class="btn-back" onclick="goStep(5,4)"><i class="fas fa-arrow-left"></i> Back</button>
+                    <button type="submit" class="btn-submit" id="submitBtn"><i class="fas fa-check"></i> Confirm Booking</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <div class="footer-brand">
+            <h3>GlowUp Ladies</h3>
+            <p>Where elegance meets expertise.<br>Only by appointment — personalized service.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="footer-contact">
+            <h4>Contact</h4>
+            <p><i class="fas fa-map-marker-alt"></i> 14/8, Asiri Road, Colombo 05</p>
+            <p><i class="fas fa-phone-alt"></i> +94 228 333 503</p>
+            <p><i class="far fa-envelope"></i> hello@glowupladies.lk</p>
+        </div>
+        <div class="footer-hours">
+            <h4>Opening Hours</h4>
+            <p>Mon – Fri: 10:00 – 20:00</p>
+            <p>Saturday: 10:00 – 18:00</p>
+            <p>Sunday: Closed</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 GlowUp Ladies Beauty Studio — crafted with elegance.</p>
+    </div>
+</footer>
+
+<div class="success-overlay" id="successOverlay">
+    <div class="success-modal">
+        <div class="success-icon"><i class="fas fa-check"></i></div>
+        <h3>Booking Confirmed! 🎉</h3>
+        <p>Thank you <span id="successName"></span></p>
+        <p>Your booking reference:</p>
+        <div class="success-ref" id="bookingRef"></div>
+        <p>A confirmation has been sent to your email.</p>
+        <button class="btn-new-booking" id="newBookingBtn">Book Another Appointment</button>
+    </div>
+</div>
+
+<script src="js/appointments.js"></script>
+</body>
+</html>

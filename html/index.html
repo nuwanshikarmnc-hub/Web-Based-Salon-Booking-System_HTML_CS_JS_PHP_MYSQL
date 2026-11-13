@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>GlowUp Ladies | Luxury Studio Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/H_style.css">
+    <link rel="stylesheet" href="css/staffstyle.css">
+</head>
+<body>
+    <header class="site-header transparent-header">
+        <div class="container header-flex">
+            <div class="logo">
+                <h1>GlowUp Ladies</h1>
+                <span class="tagline">beauty studio</span>
+            </div>
+            <nav class="main-nav">
+                <ul id="navMenu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="staff.html">Staff</a></li>
+                    <li><a href="appointments.html">Appointments</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="nav-book-btn-item"><a href="appointments.html" class="header-book-box-btn">Book</a></li>
+                </ul>
+                <div class="mobile-menu-icon" id="menuIcon">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="home-fullscreen-video-hero">
+        <video autoplay muted loop playsinline class="hero-fullscreen-video-player">
+            <source src="images/background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="container fullscreen-video-content-box">
+            <h2 class="hero-primary-heading-phrase">Experience the Elegance of GlowUp Ladies Beauty Studio</h2>
+            <p class="hero-secondary-sub-phrase">Where Expert Care Meets Luxurious Services for a Transformative Beauty Experience</p>
+            <div class="hero-scroll-indicator">
+                <a href="#introduction" class="hero-down-chevron"><i class="fas fa-chevron-down"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="introduction" class="home-one-paragraph-intro-section">
+        <div class="container structural-intro-flex-wrapper">
+            <div class="intro-left-content-block">
+                <span class="luxury-editorial-tag">Introduction</span>
+                <h3>Uplifting Your Natural Essence</h3>
+                <div class="luxury-accent-line-divider"></div>
+                <p class="one-paragraph-brand-narrative">
+                    For every beauty need, international style hubs and the specialized GlowUp Ladies team are ready to uplift your beauty with a luxury experience. Our salon provides unparalleled hair and beauty services, combining the latest techniques with a personalized touch. Enjoy a transformative journey in an elegant and relaxing environment, where our expert professionals take pride in delivering exceptional beauty results to make your studio experience completely unforgettable.
+                </p>
+            </div>
+            <div class="intro-right-image-block">
+                <div class="small-right-intro-image-container">
+                    <!-- FIXED: mackupbrushes.jpg (NOT .png!) -->
+                    <img src="images/mackupbrushes.jpg" alt="Makeup Brushes" class="right-aligned-brand-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="small-image-fallback-placeholder" style="display: none;"><span>GL</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="home-split-map-and-showcase-section">
+        <div class="container map-showcase-split-grid">
+            <div class="square-map-component-box">
+                <div class="square-map-outer-frame">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.9412196611384!2d79.8732149!3d6.8976077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2597405231b57%3A0xb367a7833e887a07!2s14%2F8%20Asiri%20Rd%2C%20Colombo%2005%2C%20Sri%20Lanka!5e0!3m2!1sen!2slv!4v1716500000000!5m2!1sen!2slv" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <div class="salon-image-component-box">
+                <div class="square-salon-picture-outer-frame">
+                    <!-- FIXED: salon image.jpg (NOT .png!) -->
+                    <img src="images/salon image.jpg" alt="GlowUp Ladies Premium Services" class="square-salon-showcase-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="square-salon-fallback-placeholder" style="display: none;">
+                        <i class="fas fa-images"></i>
+                        <span>Studio Showcase</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h3>GlowUp Ladies</h3>
+                <p>Where elegance meets expertise.<br>Only by appointment — personalized service.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 14/8, Asiri Road, Colombo 05</p>
+                <p><i class="fas fa-phone-alt"></i> +94 228333503</p>
+                <p><i class="far fa-envelope"></i> hello@GlowUpLadiesstudio.com</p>
+            </div>
+            <div class="footer-hours">
+                <h4>Opening Hours</h4>
+                <p>Mon - Fri: 10:00 – 20:00</p>
+                <p>Saturday: 10:00 – 18:00</p>
+                <p>Sunday: Closed</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 GlowUp Ladies Beauty Studio — crafted with elegance.</p>
+        </div>
+    </footer>
+
+    <script src="js/staff-script.js"></script>
+</body>
+</html>

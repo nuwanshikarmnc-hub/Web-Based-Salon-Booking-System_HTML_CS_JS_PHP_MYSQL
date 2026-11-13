@@ -1,0 +1,975 @@
+/* ============================================
+   BAGIRA BEAUTY STUDIO - STAFF PAGE STYLES
+   ============================================ */
+
+/* ===== RESET & BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fefaf5;
+    color: #2c241a;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, .logo, .section-title h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+/* ===== HEADER ===== */
+.site-header {
+    background: #fff8f2;
+    border-bottom: 1px solid #f0e3d8;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(2px);
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #8b5a2b;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.tagline {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #b78c5a;
+    font-weight: 1200;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #4a3727;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: #b87a3b;
+    border-bottom: 2px solid #dbbf94;
+    padding-bottom: 4px;
+}
+
+.mobile-menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #8b5a2b;
+    background: transparent;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.mobile-menu-icon:hover {
+    background: rgba(139, 90, 43, 0.1);
+}
+
+/* ===== HERO SECTION WITH BACKGROUND IMAGE & OPACITY ===== */
+.staff-hero {
+    position: relative;
+    text-align: center;
+    padding: 80px 20px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Background image layer with opacity control */
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 3;
+    z-index: 0;
+}
+
+/* Gradient pattern overlay for elegance */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at 10% 30%, rgba(219, 191, 148, 0.12) 2%, transparent 2.5%);
+    background-size: 28px 28px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Solid color overlay */
+.staff-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(244, 237, 229, 0.7) 0%, rgba(254, 247, 239, 0.75) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero-content h2 {
+    font-size: 3.2rem;
+    font-weight: 500;
+    color: #6e3f1c;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: #5e4a36;
+    max-width: 580px;
+    margin: 0 auto;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+/* ===== STAFF SECTION ===== */
+.staff-section {
+    padding: 50px 0 80px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+.subtitle {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #bc8f6b;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.section-title h3 {
+    font-size: 2.5rem;
+    color: #4c3522;
+    margin-bottom: 16px;
+}
+
+.divider {
+    width: 70px;
+    height: 2px;
+    background: #ddc5aa;
+    margin: 0 auto;
+}
+
+/* Staff Grid */
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+/* Staff Card */
+.staff-card {
+    background: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(91, 55, 32, 0.05);
+    transition: all 0.35s ease;
+    border: 1px solid #f3e9e0;
+    text-align: center;
+}
+
+.staff-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 40px rgba(107, 70, 40, 0.12);
+    border-color: #eedfcb;
+}
+
+/* Card Image */
+.card-img {
+    height: 320px;
+    overflow: hidden;
+    background: #e7ddd0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.staff-card:hover .card-img img {
+    transform: scale(1.02);
+}
+
+/* Fallback Avatar */
+.fallback-avatar {
+    background: linear-gradient(145deg, #eedbc8, #e2cfb7);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    font-family: 'Cormorant Garamond', serif;
+    color: #8c623f;
+    position: relative;
+}
+
+/* Staff Info */
+.staff-info {
+    padding: 24px 20px 28px;
+}
+
+.staff-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #5d3a21;
+    margin-bottom: 8px;
+}
+
+.staff-role {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #b47d4e;
+    font-weight: 600;
+    margin-bottom: 14px;
+    display: inline-block;
+    background: #fef3e9;
+    padding: 4px 14px;
+    border-radius: 40px;
+}
+
+/* Rating Stars */
+.staff-rating {
+    margin: 12px 0;
+    padding: 8px 0;
+    border-top: 1px dashed #f0e3d8;
+    border-bottom: 1px dashed #f0e3d8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.staff-rating .stars {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+.staff-rating .stars i {
+    margin: 0 1px;
+    transition: transform 0.2s ease;
+}
+
+.staff-rating .stars i:hover {
+    transform: scale(1.1);
+}
+
+.staff-rating .rating-text {
+    font-family: 'Inter', sans-serif;
+    background: #fef7f0;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    color: #b47d4e;
+    font-weight: 500;
+}
+
+/* Qualification */
+.qualification {
+    font-size: 0.9rem;
+    color: #7f6242;
+    margin: 12px 0;
+    line-height: 1.4;
+    font-weight: 400;
+    border-left: 2px solid #ebd9ca;
+    padding-left: 12px;
+    text-align: left;
+    background: #fefaf7;
+    border-radius: 12px;
+    padding: 10px 12px;
+}
+
+/* Specializations */
+.specialization {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+    justify-content: center;
+}
+
+.specialty-badge {
+    background: #f5ede4;
+    color: #9b6a3e;
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 30px;
+    letter-spacing: 0.3px;
+    transition: all 0.2s ease;
+}
+
+.specialty-badge:hover {
+    background: #e8d9cc;
+    transform: translateY(-2px);
+}
+
+/* Experience */
+.experience {
+    font-size: 0.8rem;
+    color: #b59272;
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.experience i {
+    font-size: 0.7rem;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #b58255;
+    padding: 60px;
+    grid-column: 1 / -1;
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+    background: #241e17;
+    color: #f1e8df;
+    margin-top: 40px;
+    padding-top: 48px;
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-brand h3 {
+    font-size: 1.9rem;
+    color: #e2cfb5;
+    margin-bottom: 12px;
+}
+
+.footer-brand p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #d2c2ae;
+}
+
+.social-links {
+    margin-top: 18px;
+    display: flex;
+    gap: 18px;
+}
+
+.social-links a {
+    color: #e9dccc;
+    font-size: 1.2rem;
+    transition: color 0.2s;
+}
+
+.social-links a:hover {
+    color: #dbb57c;
+}
+
+.footer-contact h4,
+.footer-hours h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+    color: #eeddc8;
+}
+
+.footer-contact p,
+.footer-hours p {
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #3a2e24;
+    padding: 20px;
+    font-size: 0.75rem;
+    color: #ad9f8c;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 900px) {
+    .container {
+        padding: 0 24px;
+    }
+    
+    .main-nav ul {
+        gap: 20px;
+    }
+    
+    .hero-content h2 {
+        font-size: 2.4rem;
+    }
+    
+    .staff-hero {
+        padding: 60px 20px;
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-icon {
+        display: block;
+    }
+    
+    .main-nav ul {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        background: #fffaf5;
+        width: 75%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 80px;
+        gap: 32px;
+        transition: 0.3s ease-in-out;
+        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1);
+        border-right: 1px solid #eedfcb;
+        z-index: 999;
+        margin: 0;
+    }
+    
+    .main-nav ul.show-menu {
+        left: 0;
+    }
+    
+    .staff-grid {
+        gap: 28px;
+    }
+    
+    .staff-card {
+        max-width: 320px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    .footer-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer-contact p {
+        justify-content: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-title h3 {
+        font-size: 2rem;
+    }
+    
+    .staff-hero {
+        padding: 50px 16px;
+        min-height: 250px;
+    }
+    
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+    
+    .main-nav ul {
+        width: 85%;
+    }
+}
+
+html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>GlowUp Ladies - Our Beauty Experts | Staff Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="staffstyle.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-flex">
+            <div class="logo">
+                <h1>GlowUp Ladies</h1>
+                <span class="tagline">beauty studio</span>
+            </div>
+            <nav class="main-nav">
+    <ul id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="staff.html" class="active">Staff</a></li>
+        <li><a href="appointments.html">Appointments</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="mobile-menu-icon" id="menuIcon">
+        <i class="fas fa-bars"></i>
+    </div>
+</nav>
+        </div>
+    </header>
+
+    <section class="staff-hero">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h2>Meet Our Artisans</h2>
+            <p>Experience & passion — every beautician brings unique mastery to enhance your natural glow.</p>
+        </div>
+    </section>
+
+    <section class="staff-section">
+        <div class="container">
+            <div class="section-title">
+                <span class="subtitle">skilled hands, radiant results</span>
+                <h3>Our Beauty Experts</h3>
+                <div class="divider"></div>
+            </div>
+            <div class="staff-grid" id="staffGrid">
+                <div class="loading-spinner"><i class="fas fa-spinner fa-pulse"></i> Loading specialists...</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h3>GlowUp Ladies</h3>
+                <p>Where elegance meets expertise.<br>Only by appointment — personalized service.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p><i class="fas fa-map-marker-alt"></i>14/8,Asiri Road,Colombo 05</p>
+                <p><i class="fas fa-phone-alt"></i> +94 228333503</p>
+                <p><i class="far fa-envelope"></i> hello@GlowUp Ladiesstudio</p>
+            </div>
+            <div class="footer-hours">
+                <h4>Opening Hours</h4>
+                <p>Mon - Fri: 10:00 – 20:00</p>
+                <p>Saturday: 10:00 – 18:00</p>
+                <p>Sunday: closed</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 GlowUp Ladies Beauty Studio — crafted with elegance.</p>
+        </div>
+    </footer>
+
+    <script src="staff-script.js"></script>
+
+
+
+/* ==========================================================================
+   GLOWUP LADIES' STUDIO - ORIGINAL VIDEO COLOR WITH HIGH-READABILITY TEXT
+   ========================================================================== */
+
+/* 1. OVERLAY NAVIGATION HEADER SYSTEMS STYLES */
+.transparent-header {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 99 !important;
+    background: transparent !important;
+    border-bottom: 1px solid rgba(254, 250, 245, 0.15);
+}
+
+.header-book-box-btn {
+    display: inline-block !important;
+    padding: 8px 24px !important;
+    border: 1.5px solid #8b5a2b !important;
+    color: #8b5a2b !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+    font-size: 0.85rem !important;
+    letter-spacing: 1px !important;
+    border-radius: 4px !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+.header-book-box-btn:hover {
+    background-color: #8b5a2b !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(139, 90, 43, 0.25);
+}
+
+/* 2. ONE-SCREEN VIDEO CONTAINER HERO (ORIGINAL VIBRANT COLORS) */
+.home-fullscreen-video-hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    background-color: #1a1510;
+}
+
+.hero-fullscreen-video-player {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Center text grouping styling using backdrop safety layers for crisp visibility over light frames */
+.fullscreen-video-content-box {
+    position: relative;
+    z-index: 2;
+    max-width: 950px;
+    padding: 30px 40px;
+    margin-top: 60px;
+    border-radius: 16px;
+    /* Soft premium blur directly underneath text to protect readability without darkening the whole video screen */
+    background: rgba(20, 16, 12, 0.15);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+/* Large phrase style updates with distinct premium drop-shadow tracking masks */
+.hero-primary-heading-phrase {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 3.8rem !important;
+    font-weight: 600 !important;
+    color: #ffffff !important;
+    line-height: 1.15 !important;
+    margin-bottom: 24px !important;
+    letter-spacing: -0.5px !important;
+    /* High contrast cross-shadow protects white letters from disappearing on light moving frames */
+    text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.85), 
+                 0px 2px 4px rgba(0, 0, 0, 0.95),
+                 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Secondary phrase tracking metrics */
+.hero-secondary-sub-phrase {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 1.25rem !important;
+    color: #ffffff !important;
+    max-width: 760px !important;
+    margin: 0 auto !important;
+    line-height: 1.6 !important;
+    font-weight: 500 !important;
+    text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.85),
+                 0px 1px 3px rgba(0, 0, 0, 0.95);
+}
+
+.hero-scroll-indicator {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounceIndicator 2s infinite;
+}
+
+.hero-down-chevron {
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* 3. ONE-PARAGRAPH NARRATIVE ROW DESIGN STYLES */
+.home-one-paragraph-intro-section {
+    padding: 120px 0;
+    background-color: #ffffff;
+}
+
+.structural-intro-flex-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 64px;
+}
+
+.intro-left-content-block {
+    flex: 1;
+    max-width: 60%;
+}
+
+.luxury-editorial-tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #bc8f6b;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.intro-left-content-block h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    color: #4a3727;
+    margin-bottom: 16px;
+}
+
+.luxury-accent-line-divider {
+    width: 60px;
+    height: 2px;
+    background-color: #e8d8c8;
+    margin-bottom: 24px;
+}
+
+.one-paragraph-brand-narrative {
+    font-size: 1.05rem;
+    color: #5e4a36;
+    line-height: 1.85;
+    text-align: justify;
+}
+
+.intro-right-image-block {
+    flex-shrink: 0;
+    width: 35%;
+    max-width: 340px;
+}
+
+.small-right-intro-image-container {
+    width: 100%;
+    height: 380px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(91, 55, 32, 0.06);
+    border: 1px solid #f3e9e0;
+}
+
+.right-aligned-brand-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.small-image-fallback-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg, #eedbc8, #e2cfb7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.small-image-fallback-placeholder span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    color: #8c623f;
+}
+
+/* 4. HORIZONTAL MATRIX SPLIT GRID STYLES (SQUARE MAP + SHOWCASE) */
+.home-split-map-and-showcase-section {
+    padding: 0 0 120px 0;
+    background-color: #ffffff;
+}
+
+.map-showcase-split-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.square-map-outer-frame, .square-salon-picture-outer-frame {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    height: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(91, 55, 32, 0.07);
+    border: 1px solid #eedfcb;
+}
+
+.square-map-outer-frame iframe, .square-salon-showcase-img, .square-salon-fallback-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.square-salon-showcase-img {
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.square-salon-picture-outer-frame:hover .square-salon-showcase-img {
+    transform: scale(1.02);
+}
+
+.square-salon-fallback-placeholder {
+    background-color: #fefaf5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #bc8f6b;
+}
+
+.square-salon-fallback-placeholder i { font-size: 2.5rem; }
+.square-salon-fallback-placeholder span { font-family: 'Inter', sans-serif; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; }
+
+@keyframes bounceIndicator {
+    0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+    40% { transform: translateX(-50%) translateY(-10px); }
+    60% { transform: translateX(-50%) translateY(-5px); }
+}
+
+/* 5. RESPONSIVE MEDIA QUERIES FOR TABLETS & MOBILES */
+@media (max-width: 1024px) {
+    .hero-primary-heading-phrase { font-size: 3rem !important; }
+    .intro-left-content-block h3 { font-size: 2.4rem; }
+    .structural-intro-flex-wrapper { gap: 40px; }
+}
+
+@media (max-width: 768px) {
+    .transparent-header { position: relative !important; background: #ffffff !important; border-bottom: none; }
+    .header-book-box-btn { border-color: #8b5a2b !important; color: #8b5a2b !important; }
+    .nav-book-btn-item { margin-top: 16px; padding: 0 20px; }
+    .home-fullscreen-video-hero { height: auto; min-height: 70vh; padding: 100px 24px; }
+    .fullscreen-video-content-box { background: none; backdrop-filter: none; -webkit-backdrop-filter: none; padding: 0; }
+    .hero-primary-heading-phrase { font-size: 2.2rem !important; color: #241e17 !important; text-shadow: none !important; }
+    .hero-secondary-sub-phrase { font-size: 1rem !important; color: #5e4a36 !important; text-shadow: none !important; }
+    .hero-scroll-indicator { display: none; }
+    .structural-intro-flex-wrapper { flex-direction: column; text-align: center; gap: 48px; }
+    .intro-left-content-block { max-width: 100%; }
+    .luxury-accent-line-divider { margin: 0 auto 24px auto; }
+    .intro-right-image-block { width: 100%; max-width: 400px; }
+    .small-right-intro-image-container { height: 320px; }
+    .map-showcase-split-grid { grid-template-columns: 1fr; gap: 24px; }
+}
+
+@media (max-width: 480px) {
+    .hero-primary-heading-phrase { font-size: 1.8rem !important; }
+    .intro-left-content-block h3 { font-size: 2rem; }
+    .small-right-intro-image-container { height: 260px; }
+}
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
